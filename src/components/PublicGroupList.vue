@@ -39,7 +39,8 @@
                                             <font-awesome-icon v-if="editMode" icon="times" class="action remove me-3" @click="removeMonitor(group.index, monitor.index)" />
 
                                             <Uptime :monitor="monitor.element" type="24" :pill="true" />
-                                            {{ monitor.element.name }}
+                                            
+                                            <a style="padding-left: 20px;" :href="monitor.element.url" target="_blank">{{ monitor.element.name }}</a>
                                         </div>
                                         <div class="tags">
                                             <Tag v-for="tag in monitor.element.tags" :key="tag" :item="tag" :size="'sm'" />
